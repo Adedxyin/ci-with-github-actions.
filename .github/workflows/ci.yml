@@ -28,27 +28,6 @@ jobs:
                 path: ~/.cache/pip
                 key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
 
-<<<<<<< HEAD
-      # Step 3: Cache dependencies
-      - name: Cache Dependencies
-        uses: actions/cache@v3
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
-
-      # Step 4: Install dependencies
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-
-      # Step 5: Run tests with pytest
-      - name: Run tests
-        run: |
-          pytest
-=======
             - name: Install Dependencies
               run: |
                 python -m pip install --upgrade pip
@@ -78,4 +57,3 @@ jobs:
               with:
                 push: true
                 tags: ${{ vars.DOCKERHUB_USERNAME }}/flask-app:${{ github.sha }}
->>>>>>> ba66c57d7337d7291284563ddb6194817ce3c6b9
