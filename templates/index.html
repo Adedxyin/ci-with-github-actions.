@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Welcome to Flask App!</h1>
+    <p class="lead">This is a simple Flask application with basic routing and templates.</p>
+    <hr class="my-4">
+    <p>Feel free to explore the different pages and features.</p>
+    <a class="btn btn-primary btn-lg" href="{{ url_for('about') }}" role="button">Learn more</a>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Home</h5>
+                <p class="card-text">Welcome to our Flask application. This is the main landing page.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">About</h5>
+                <p class="card-text">Learn more about our application and its features.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Contact</h5>
+                <p class="card-text">Get in touch with us through our contact form.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

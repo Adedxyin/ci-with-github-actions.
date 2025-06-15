@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1 class="mb-4">About Us</h1>
+    <div class="row">
+        <div class="col-md-8">
+            <p class="lead">This is a simple Flask application that demonstrates basic web development concepts.</p>
+            <p>Features include:</p>
+            <ul class="list-group mb-4">
+                <li class="list-group-item">Responsive design using Bootstrap</li>
+                <li class="list-group-item">Multiple routes and pages</li>
+                <li class="list-group-item">Contact form with flash messages</li>
+                <li class="list-group-item">Template inheritance</li>
+            </ul>
+            <p>The application is built using:</p>
+            <ul class="list-group">
+                <li class="list-group-item">Python 3.x</li>
+                <li class="list-group-item">Flask web framework</li>
+                <li class="list-group-item">Bootstrap 5 for styling</li>
+                <li class="list-group-item">Jinja2 templating engine</li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="{{ url_for('home') }}">Home</a></li>
+                        <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 
